@@ -1,0 +1,229 @@
+html,
+body {
+	height: 100%;
+ 	margin: 0; 
+ 	padding: 0; 
+}
+
+h1 {
+    font-family: 'Cabin Sketch', Helvetica;
+    color: #FF6F69;
+    display: flex;
+    font-size: 70px;
+    text-align: center;
+    margin: 0 auto;
+    padding-left: 1em;
+}
+
+li {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.4em;
+    color: #000;
+    list-style: none;
+    letter-spacing: 1px;
+    line-height: 1.4em;
+}
+
+#map {
+ 	width:75%;
+    height: -webkit-calc(100% - 0);
+    height: -moz-calc(100% - 0);
+    height: -ms-calc(100% - 0);
+    height: -o-calc(100% - 0);
+    height:calc(100% - 0);
+    position:absolute;
+    right:16px;
+    top:90px;
+    bottom:0;
+    overflow:hidden;
+    display: flex;
+    border: 3px solid #FF6F69;
+    margin-bottom: 20px;
+    max-width: 80%;
+}
+
+#main,
+#main>.row {
+	height:100%;
+}
+
+#main>.row {
+    overflow-y:scroll;   
+}
+
+.listNav {
+    width: 100%;
+    margin: 10px 25px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.navicon {
+    font-size: 3em;
+    margin: 10px 10px;
+    position: absolute;
+    color: #AAD8B0;
+}
+
+.listDrop {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    display: none;
+    
+}
+.listDrop li{
+    font-size: 20px;
+    padding: 15px;
+    width: 91%;
+}
+
+input[type=search] {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #000;
+}
+
+.listDrop li:hover{
+    background: #FF6F69;
+    color: #FFF;
+}
+
+#search-input {
+	width: 90%;
+}
+
+img{
+    width: 40%;
+    height: 40%;
+}
+
+footer {
+    position: absolute;
+    bottom:0;
+    left: 0;
+}
+
+/* Additional font styles added to search list to make it more pleasing to the viewer.
+*/
+ul li {
+    font-family: 'Indie Flower', cursive;
+}
+
+#search-input {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Hover effect added using CSS on the hamburger icon that indicates the nav menu on the
+page. When the user hovers over the icon, it quickly rotates 360 degrees for enhanced viewing.
+*/
+.navicon {
+    -webkit-transition:all 0.5s ease-out;
+    -moz-transition:all 0.5s ease-out;
+    -ms-transition:all 0.5s ease-out;
+    -o-transition:all 0.5s ease-out;
+    transition:all 0.5s ease-out;
+}
+
+.navicon:hover {
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+    transform:rotate(360deg);
+}
+
+
+
+/* Media queries to make the page responsive regardless of viewing device, maintaining
+the user experience.
+*/
+
+/* Smartphones (portrait and landscape) */
+@media screen and (max-width : 350px){
+    h1{
+        font-size: 0.3em;
+        float: left;
+        margin-right: 50px;
+        text-align: center;
+        visibility: hidden;
+    }
+   .row {
+       float: left;
+       margin-left: -26%;
+   }
+   .row li {
+       margin-left: -135%;
+       font-size: 0.65em;
+   }
+
+
+    #search-input{
+        width: 300%;
+        font-size: 10px;
+    }
+    img{
+        float: right;
+        width: 35%;
+        height: 35%;
+    }
+    footer {
+        position: absolute;
+        bottom:0;
+        left: 0;
+    }
+    .navicon {
+        font-size: 1em;
+    }
+} 
+
+/* Tablets (portrait and landscape) */
+@media screen and (min-width : 360px) and (max-width : 800px){
+    h1 {
+        font-size: 2.5em;
+        padding-left: 30px;
+    }
+    .listDrop li {
+        font-size: 0.7em;
+        width: 95%;
+    }
+    .listDrop {
+        padding-right: 20px;
+    }
+    #search-input{
+        width: 80%;
+        font-size: 0.7em;
+    }
+    img {
+        width: 20%;
+        height: 20%;
+    }
+    footer {
+        position: absolute;
+        bottom:0;
+        left: 0;
+    }
+    .navicon {
+        font-size: 1.2em;
+    }
+}
+
+/* Desktops and laptops */
+@media screen and (min-width : 780px) and (max-width : 1180px){
+    h1 {
+        font-size: 3.5em;
+        margin-left: 5px;
+    }
+    .listDrop li {
+        font-size: 1em;
+    }
+    .navicon {
+        font-size: 2em;
+    }
+}
+
