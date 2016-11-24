@@ -1,46 +1,59 @@
-## Neighbourhood Map
+Feat: Created a single page application featuring a map of a neighbourhood I'd like to visit. Functionality was added
+through placement of markers identifying popular spots, search/filter bar to find specific locations, and a list view to
+support all locations.
 
-This project uses google maps api to generate a predefined location(in this context i have used Hyderabad) on the map with marker. When marker is clicked it displays some information about the location using foursquare api.
+Docs: Added a description for the project
 
-Below are the project's requirements from Udacity:
-----------------------------------------------------
+    Description:
 
-1. Download the Knockout framework. Knockout must be used to handle list, filter, and any other information on the page that is subject to changing state. Things that should not be handled by knockout: anything the map api is used for, creating markers, tracking their click events, making the map, refreshing the map.
+    Neighbourhood Map Project
 
-2. Write code required to add a full-screen map to your page using the Google Maps API. For sake of efficiency, the map API should be called only once.
+    This is an interactive map application created to satisfy the requirements for project 5, which utilises materials
+    and info learned from the Intro to AJAX and Javascript Design Patterns courses. It has additional functionality through
+    highlighted locations, third-party data about those locations and various ways to browse the content.
 
-3. Write code required to display map markers identifying at least 5 locations that you are interested in within this neighborhood. Your app should display those locations by default when the page is loaded.
+    Directions for usage:
 
-4. Implement a list view of the set of locations defined in   step3. 
+    1. Download all the files given in the zipped folder, unzip it and open the file index.html
 
-5. Provide a filter option that uses an input field to filter both the list view and the map markers displayed by default on load. The list view and the markers should update accordingly in real-time. Providing a search function through a third-party API is not enough to meet specifications.
+    2. The file will load a google map rendition of the city of Sydney in Australia, with 6 data points pinned on the
+       map for viewing. Markers will perform a bouncing animation when clicked on To choose locations, you can either:
 
-6. Add functionality using third-party APIs to provide information when a map marker or list view entry is clicked (ex. Yelp reviews, Wikipedia, Flickr images,Foursquare etc). Note that StreetView and Places don't count as an additional 3rd party API because they are libraries included in the Google Maps API. If you need a refresher on making AJAX requests to third-party servers, check out our Intro to AJAX course.
+        a. Clicking on a marker directly, or
+        b. Clicking on an item in the list on the bottom right of the screen. The list is hidden upon loading, so
+           click on the hamburger icon in the top left corner to show it; from here you can click on a location
+           to show it on the map.
 
-7. Add functionality to animate a map marker when either the list item associated with it or the map marker itself is selected.
+    3. A chosen location has a box pop up over the chosen marker, giving its location and a link to the most relevant
+       website about it.
 
-8. Add functionality to open an infoWindow with the information described in step 7 when either a location is selected from the list view or its map marker is selected directly.
+    4. The user can also filter locations by typing in the search box in the right corner of the page. Only relevant
+       keywords or letters will filter out the locations, otherwise nothing will be displayed since it isn't present
+       on the map.
 
-9. The app's interface should be intuitive to use. For example, the input text area to filter locations should be easy to locate. It should be easy to understand what set of locations is being filtered. Selecting a location via list item or map marker should cause the map marker to bounce or in some other way animate to indicate that the location has been selected and associated info window should open above map marker with additional information.
+    5. As mentioned before, when a location is chosen a box appears above it. Using Foursquare API, this box contains
+       the most relevant address and a website link to a location relevant to the area, like its website or the website
+       of a nearby relevant area. For some locations like Circular Quay and Sydney Tower, the Foursquare API will load
+       the website of a nearby area, since these contain many places instead of simply being one themselves.
 
-10. Error Handling: In case of error (e.g. in a situation where a third party api does not return the expected result) we expect your webpage to do one of the following: A message is displayed notifying the user that the data can't be loaded, OR There are no negative repercussions to the UI. Note: Please note that we expect students to handle errors if the browser has trouble initially reaching the 3rd-party site as well. For example, imagine a user is using your neighborhood map, but her firewall prevents her from accessing the Instagram servers. Here is a reference article on how to block websites with the hosts file. It is important to handle errors to give users a consistent and good experience with the webpage. Read this blogpost to learn more .Some JavaScript libraries provide special methods to handle errors. For example: refer to .fail() method discussed here if you use jQuery's ajax() method. We strongly encourage you to explore ways to handle errors in the library you are using to make API calls.
+    6. A small "Powered by Foursqaure" icon is at the bottom left of the page, to acknowledge the use of its API.
 
 
-How to run application
-----------------------
-* Download the zip file from the following github repo([https://github.com/vinayeh10/NeighbourHood-Map).
-* open the index.html file in browser.
+### APIs and Frameworks Used
+---
+- Google Maps API
+- Foursquare API
+- HTML, CSS, JS
+- JQuery
+- Bootstrap
+- knockout.js
 
-Features
------------
-1. Google Map with Markers
-2. Filter places and update map in real time.
-3. Uses FourSquare to get information of the places
+### Reference
 
-References
-----------
-* [Bootstrap](http://getbootstrap.com/)
-* [Foursqaure API](https://developer.foursquare.com/)
-* [Google maps javascript api](https://developers.google.com/maps/documentation/javascript/tutorial)
-* [Knockout js](http://knockoutjs.com/)
-* [jquery ajax](http://api.jquery.com/jquery.ajax/)
+* http://you.arenot.me/2010/06/29/google-maps-api-v3-0-multiple-markers-multiple-infowindows/
+* http://www.knockmeout.net/2011/04/utility-functions-in-knockoutjs.html
+* http://www.evoluted.net/thinktank/web-design/custom-google-maps-style-tool
+* https://color.adobe.com/Beach-Time-color-theme-2629293/
+* https://medium.com/@jrdnndtsch/drop-down-hamburger-menu-with-jquery-1ae7fa572c04#.prhyr3t6r
+
+
